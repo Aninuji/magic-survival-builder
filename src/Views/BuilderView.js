@@ -12,40 +12,44 @@ export default function BuildView(props) {
   return (
     <Container>
       <Row>
-        <Col className="bg-light border" md="4" sm="12">
+        <Col md="12" sm="12">
           <StatsPanel></StatsPanel>
         </Col>
-        <Col className="bg-light border" md="8" sm="12">
+      </Row>
+      <Row>
+        <Col md="5" sm="12">
           <Row>
-            <Col className="bg-light border" md="6" sm="6">
-              <Row>
-                <Col className="bg-light border" md="12">
-                  <SubjectPanel></SubjectPanel>
-                </Col>
-                <Col className="bg-light border" md="12">
-                  <ClassPanel></ClassPanel>
-                </Col>
-              </Row>
+            <Col md="12">
+              <SubjectPanel></SubjectPanel>
             </Col>
-            <Col className="bg-light border" md="6" sm="6">
+          </Row>
+          <Row>
+            <Col md="12">
+              <ClassPanel></ClassPanel>
+            </Col>
+          </Row>
+          <Row>
+            <Col md="12">
+              <MasteriesPanel></MasteriesPanel>
+            </Col>
+          </Row>
+        </Col>
+        <Col md="7" sm="12">
+          <Row>
+            <Col md="12">
               <ResearchPanel></ResearchPanel>
             </Col>
           </Row>
           <Row>
-            <Col className="bg-light border" md="12" sm="12">
-              <MasteriesPanel></MasteriesPanel>
-            </Col>
-          </Row>
-          <Row>
-            <Col className="bg-light border" md="12" sm="12">
+            <Col md="12">
               <ArtifactsPanel></ArtifactsPanel>
             </Col>
           </Row>
-          <Row>
-            <Col className="bg-light border" md="12" sm="12">
-              <MagicsPanel></MagicsPanel>
-            </Col>
-          </Row>
+        </Col>
+      </Row>
+      <Row>
+        <Col md="12" sm="12">
+          <MagicsPanel></MagicsPanel>
         </Col>
       </Row>
     </Container>

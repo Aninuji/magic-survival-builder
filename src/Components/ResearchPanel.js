@@ -13,32 +13,32 @@ import {
 
 export default function ResearchPanel(props) {
   return (
-    <Card className="my-2" color="primary" inverse>
+    <Card className="my-2">
       <CardHeader tag="h5">Research</CardHeader>
       <CardBody>
         <Form>
           <Row>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Intelligence</Label>
+                <Label>Intelligence</Label>
                 <Input type="number" max={5} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Vitality</Label>
+                <Label>Vitality</Label>
                 <Input type="number" max={5} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Mana Refine</Label>
+                <Label>Mana Refine</Label>
                 <Input type="number" max={6} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Fast Casting</Label>
+                <Label>Fast Casting</Label>
                 <Input type="number" max={5} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
@@ -46,25 +46,25 @@ export default function ResearchPanel(props) {
           <Row>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Snipe</Label>
+                <Label>Snipe</Label>
                 <Input type="number" max={5} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Resistance</Label>
+                <Label>Resistance</Label>
                 <Input type="number" max={5} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Agility</Label>
+                <Label>Agility</Label>
                 <Input type="number" max={6} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Haste</Label>
+                <Label>Haste</Label>
                 <Input type="number" max={5} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
@@ -72,25 +72,25 @@ export default function ResearchPanel(props) {
           <Row>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Regeneration</Label>
+                <Label>Regeneration</Label>
                 <Input type="number" max={5} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Explorer</Label>
+                <Label>Explorer</Label>
                 <Input type="number" max={5} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Arcane Effuse</Label>
+                <Label>Arcane Effuse</Label>
                 <Input type="number" max={6} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Concentration</Label>
+                <Label>Concentration</Label>
                 <Input type="number" max={5} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
@@ -98,25 +98,25 @@ export default function ResearchPanel(props) {
           <Row>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Recycle</Label>
+                <Label>Recycle</Label>
                 <Input type="number" max={5} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Analysis</Label>
+                <Label>Analysis</Label>
                 <Input type="number" max={5} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Guardian</Label>
+                <Label>Guardian</Label>
                 <Input type="number" max={6} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Awakening</Label>
+                <Label>Awakening</Label>
                 <Input type="number" max={5} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
@@ -124,25 +124,25 @@ export default function ResearchPanel(props) {
           <Row>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Growth</Label>
+                <Label>Growth</Label>
                 <Input type="number" max={5} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Wanted</Label>
+                <Label>Wanted</Label>
                 <Input type="number" max={5} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Luck</Label>
+                <Label>Luck</Label>
                 <Input type="number" max={6} min={0} defaultValue={0} />
               </FormGroup>
             </Col>
             <Col md={3}>
               <FormGroup>
-                <Label className="text-nowrap">Booty</Label>
+                <Label>Booty</Label>
                 <Input type="number" max={5} min={0} defaultValue={0} />
               </FormGroup>
             </Col>

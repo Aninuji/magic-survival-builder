@@ -1,19 +1,85 @@
 import React from "react";
-import { Card, CardHeader, CardTitle, CardBody, CardText } from "reactstrap";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  Form,
+  Row,
+  Col,
+  FormGroup,
+  Label,
+} from "reactstrap";
+import Select from "react-select";
+import { masteries } from "../data/masteries";
 
 export default function MasteriesPanel(props) {
   return (
-    <Card
-      className="my-2"
-      color="warning"
-      inverse
-    >
-      <CardHeader>Choose Masteries</CardHeader>
+    <Card className="my-2">
+      <CardHeader tag="h5">Masteries</CardHeader>
       <CardBody>
-        <CardTitle tag="h5">Special Title Treatment</CardTitle>
-        <CardText>
-          With supporting text below as a natural lead-in to additional content.
-        </CardText>
+        <Form>
+          <Row>
+            <Col md={6}>
+              <FormGroup>
+                <Label>Level 20</Label>
+                <Select
+                  className="basic-single"
+                  classNamePrefix="select"
+                  defaultValue={masteries[0]}
+                  options={masteries}
+                />
+              </FormGroup>
+            </Col>
+            <Col md={6}>
+              <FormGroup>
+                <Label>Level 40</Label>
+                <Select
+                  className="basic-single"
+                  classNamePrefix="select"
+                  defaultValue={masteries[0]}
+                  options={masteries}
+                />
+              </FormGroup>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <FormGroup>
+                <Label>Level 60</Label>
+                <Select
+                  className="basic-single"
+                  classNamePrefix="select"
+                  defaultValue={masteries[0]}
+                  options={masteries}
+                />
+              </FormGroup>
+            </Col>
+            <Col md={6}>
+              <FormGroup>
+                <Label>Level 80</Label>
+                <Select
+                  className="basic-single"
+                  classNamePrefix="select"
+                  defaultValue={masteries[0]}
+                  options={masteries}
+                />
+              </FormGroup>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={12}>
+              <FormGroup>
+                <Label>Cube's Mastery</Label>
+                <Select
+                  className="basic-single"
+                  classNamePrefix="select"
+                  defaultValue={masteries[0]}
+                  options={masteries}
+                />
+              </FormGroup>
+            </Col>
+          </Row>
+        </Form>
       </CardBody>
     </Card>
   );

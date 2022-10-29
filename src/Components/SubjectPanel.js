@@ -7,32 +7,26 @@ import {
   Row,
   Col,
   FormGroup,
-  Label,
-  Input,
 } from "reactstrap";
+import Select from "react-select";
+import { subjects } from "../data/subjects";
 
 export default function SubjectPanel(props) {
   return (
-    <Card className="my-2" color="success" inverse>
+    <Card className="my-2">
       <CardHeader tag="h5">Subject</CardHeader>
       <CardBody>
         <Form>
           <Row>
-            <Col sm={10}>
-              <FormGroup check>
-                <Input type="radio" defaultChecked /> <Label check>Human</Label>
-              </FormGroup>
-              <FormGroup check>
-                <Input type="radio" /> <Label check>Elf</Label>
-              </FormGroup>
-              <FormGroup check disabled>
-                <Input type="radio" /> <Label check>Demon</Label>
-              </FormGroup>
-              <FormGroup check disabled>
-                <Input type="radio" /> <Label check>Spirit</Label>
-              </FormGroup>
-              <FormGroup check disabled>
-                <Input type="radio" /> <Label check>Jack-O-Lantern</Label>
+            <Col>
+              <FormGroup>
+                <Select
+                  className="basic-single"
+                  classNamePrefix="select"
+                  defaultValue={subjects[0]}
+                  name="color"
+                  options={subjects}
+                />
               </FormGroup>
             </Col>
           </Row>

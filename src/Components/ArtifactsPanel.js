@@ -1,19 +1,34 @@
 import React from "react";
-import { Card, CardHeader, CardTitle, CardBody, CardText } from "reactstrap";
-
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  Form,
+  Row,
+  Col,
+  FormGroup,
+} from "reactstrap";
+import Select from "react-select";
+import { artifacts } from "../data/artifacts";
 export default function ArtifactsPanel(props) {
   return (
-    <Card
-      className="my-2"
-      color="success"
-      inverse
-    >
-      <CardHeader>Choose Artifacts</CardHeader>
+    <Card className="my-2">
+      <CardHeader tag="h5">Artifacts</CardHeader>
       <CardBody>
-        <CardTitle tag="h5">Special Title Treatment</CardTitle>
-        <CardText>
-          With supporting text below as a natural lead-in to additional content.
-        </CardText>
+        <Form>
+          <Row>
+            <Col>
+              <FormGroup>
+                <Select
+                  className="basic-single"
+                  classNamePrefix="select"
+                  isMulti
+                  options={artifacts}
+                />
+              </FormGroup>
+            </Col>
+          </Row>
+        </Form>
       </CardBody>
     </Card>
   );
