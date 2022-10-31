@@ -12,43 +12,45 @@ export default function BuildView(props) {
   return (
     <Container>
       <Row>
-        <Col md="12" sm="12">
-          <StatsPanel></StatsPanel>
-        </Col>
-      </Row>
-      <Row>
-        <Col md="5" sm="12">
-          <Row>
-            <Col md="12">
-              <SubjectPanel></SubjectPanel>
-            </Col>
-          </Row>
-          <Row>
-            <Col md="12">
-              <ClassPanel></ClassPanel>
-            </Col>
-          </Row>
-          <Row>
-            <Col md="12">
-              <MasteriesPanel></MasteriesPanel>
-            </Col>
-          </Row>
-        </Col>
         <Col md="7" sm="12">
           <Row>
-            <Col md="12">
-              <ResearchPanel></ResearchPanel>
+            <Col>
+              <StatsPanel></StatsPanel>
             </Col>
           </Row>
           <Row>
-            <Col md="12">
-              <ArtifactsPanel></ArtifactsPanel>
+            <Col md="6" sm="12">
+              <Row>
+                <Col>
+                  <SubjectPanel></SubjectPanel>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <ClassPanel></ClassPanel>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <MasteriesPanel></MasteriesPanel>
+                </Col>
+              </Row>
+            </Col>
+            <Col md="6" sm="12">
+              <Row>
+                <Col>
+                  <ResearchPanel columns={3}></ResearchPanel>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <ArtifactsPanel></ArtifactsPanel>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Col>
-      </Row>
-      <Row>
-        <Col md="12" sm="12">
+        <Col md="5" sm="12">
           <MagicsPanel></MagicsPanel>
         </Col>
       </Row>

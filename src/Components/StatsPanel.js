@@ -97,13 +97,13 @@ export default function SubjectPanel(props) {
             <Row>
               <Col md={2}>
                 <FormGroup>
-                  <Label>Blue Magic Damage</Label>
+                  <Label>All Magic Damage</Label>
                   <Input id="blue_damage" value={"0%"} disabled />
                 </FormGroup>
               </Col>
               <Col md={2}>
                 <FormGroup>
-                  <Label>Red Magic Damage</Label>
+                  <Label>All Magic Power</Label>
                   <Input id="red_damage" value={"0%"} disabled />
                 </FormGroup>
               </Col>

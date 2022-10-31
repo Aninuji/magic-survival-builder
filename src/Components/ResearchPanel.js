@@ -10,145 +10,42 @@ import {
   Input,
   FormGroup,
 } from "reactstrap";
+import PropTypes from "prop-types";
+
+import { research } from "../data/research";
 
 export default function ResearchPanel(props) {
+  function GenerateGrid(){
+    return research.map((research_item, index) => {
+      return (
+        <Col>
+          <FormGroup>
+            <Label>{research_item.label}</Label>
+            <Input
+              type="number"
+              max={research_item.MaxLevel}
+              min={0}
+              defaultValue={0}
+            />
+          </FormGroup>
+        </Col>
+      );
+    })
+  }
   return (
     <Card className="my-2">
       <CardHeader tag="h5">Research</CardHeader>
       <CardBody>
         <Form>
           <Row>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Intelligence</Label>
-                <Input type="number" max={5} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Vitality</Label>
-                <Input type="number" max={5} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Mana Refine</Label>
-                <Input type="number" max={6} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Fast Casting</Label>
-                <Input type="number" max={5} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Snipe</Label>
-                <Input type="number" max={5} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Resistance</Label>
-                <Input type="number" max={5} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Agility</Label>
-                <Input type="number" max={6} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Haste</Label>
-                <Input type="number" max={5} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Regeneration</Label>
-                <Input type="number" max={5} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Explorer</Label>
-                <Input type="number" max={5} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Arcane Effuse</Label>
-                <Input type="number" max={6} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Concentration</Label>
-                <Input type="number" max={5} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Recycle</Label>
-                <Input type="number" max={5} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Analysis</Label>
-                <Input type="number" max={5} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Guardian</Label>
-                <Input type="number" max={6} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Awakening</Label>
-                <Input type="number" max={5} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Growth</Label>
-                <Input type="number" max={5} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Wanted</Label>
-                <Input type="number" max={5} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Luck</Label>
-                <Input type="number" max={6} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
-            <Col md={3}>
-              <FormGroup>
-                <Label>Booty</Label>
-                <Input type="number" max={5} min={0} defaultValue={0} />
-              </FormGroup>
-            </Col>
+            {GenerateGrid()}
           </Row>
         </Form>
       </CardBody>
     </Card>
   );
 }
+
+ResearchPanel.propTypes = {
+  columns: PropTypes.number,
+};
